@@ -1,4 +1,4 @@
-# Hello World
+# Degen Token Creation
 This Solidity program is a simple Token program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of the code is to create a token on avalanche c chain network
 
 ## Description
