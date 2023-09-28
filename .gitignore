@@ -1,7 +1,7 @@
 node_modules
 
 node_modules
-.env
+.env.local
 coverage
 coverage.json
 typechain
@@ -10,4 +10,5 @@ typechain-types
 # Hardhat files
 cache
 artifacts
+
 

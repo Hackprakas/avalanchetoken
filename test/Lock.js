@@ -26,7 +26,7 @@ describe("DegenToken", function () {
 
   it("Should mint tokens to the owner", async function () {
     const initialBalance = await degenToken.balanceOf(owner.address);
-    const amountToMint = ethers.parseEther("2"); // Mint 1000 DGN (adjust as needed)
+    const amountToMint = ethers.parseEther("1"); // Mint 1000 DGN (adjust as needed)
 
     await degenToken.connect(owner).mint(owner.address, amountToMint);
 
@@ -35,7 +35,7 @@ describe("DegenToken", function () {
     const balanceChange = finalBalance-(initialBalance);
 
     // Convert amountToMint to BigNumber for comparison
-    const expectedChange = ethers.parseEther("2");
+    const expectedChange = ethers.parseEther("1");
 
     // Compare the balance change with the expected change
     expect(balanceChange).to.equal(expectedChange);
@@ -43,7 +43,7 @@ describe("DegenToken", function () {
 
   it("Should not allow minting by non-owner", async function () {
     const nonOwner = user1;
-    const amountToMint = ethers.parseEther("2"); // Mint 1000 DGN (adjust as needed)
+    const amountToMint = ethers.parseEther("1"); // Mint 1000 DGN (adjust as needed)
 
     await expect(degenToken.connect(nonOwner).mint(owner.address, amountToMint)).to.be.revertedWith(
       "Ownable: caller is not the owner"
